@@ -8,7 +8,9 @@ import { withSelect, withDispatch } from '@wordpress/data';
 
 const FeaturedVideo = ( { postType, postMeta, setPostMeta } ) => {
 
-   return ( <PluginDocumentSettingPanel title='Featured Video' initialOpen="false">
+   return ( 
+   
+        <>{ ( 'undefined' !== typeof postMeta ) && <PluginDocumentSettingPanel title='Featured Video' initialOpen="false">
                 <TextControl
                     label='YouTube Video ID'
                     value={ postMeta._wsu_featured_video_youtube }
@@ -27,7 +29,8 @@ const FeaturedVideo = ( { postType, postMeta, setPostMeta } ) => {
                     help='YouTube does not support background videos'
                     onChange={ ( value ) => setPostMeta( { _wsu_featured_thumbnail_video: value } ) }
                 />
-            </PluginDocumentSettingPanel>
+            </PluginDocumentSettingPanel> }
+            </>
         )
 }
 
