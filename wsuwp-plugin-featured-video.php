@@ -3,7 +3,7 @@
  * Plugin Name: (Beta) WSUWP Featured Video
  * Plugin URI: https://github.com/wsuwebteam/wsuwp-plugin-featured-video
  * Description: Adds featured video support to post types.
- * Version: 1.0.0
+ * Version: 1.0.2
  * Requires PHP: 7.3
  * Author: Washington State University, Danial Bleile
  * Author URI: https://web.wsu.edu/
