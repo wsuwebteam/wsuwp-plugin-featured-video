@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "start": "wp-scripts start src/editor.js --output-path=dist/",
+        "build": "wp-scripts build src/editor.js --output-path=dist/"
+    }
+}

@@ -1,0 +1,1 @@
+<div class="wsu-featured-video"><iframe width="100%" style="aspect-ratio: 16 / 9; max-width: 100%; margin-bottom: 2rem" src="https://www.youtube.com/embed/<?php echo esc_attr( $video_id ); ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
