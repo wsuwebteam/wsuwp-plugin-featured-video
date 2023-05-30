@@ -11,15 +11,15 @@ const FeaturedVideo = ( { postType, postMeta, setPostMeta } ) => {
    return ( <PluginDocumentSettingPanel title='Featured Video' initialOpen="false">
                 <TextControl
                     label='YouTube Video ID'
-                    value={ postMeta.wsu_featured_video_youtube }
+                    value={ postMeta._wsu_featured_video_youtube }
                     help=''
-                    onChange={ ( value ) => setPostMeta( { wsu_featured_video_youtube: value } ) }
+                    onChange={ ( value ) => setPostMeta( { _wsu_featured_video_youtube: value } ) }
                 />
                 <TextControl
                     label='Background/Autoplay Video (Vimeo Only)'
-                    value={ postMeta.wsu_featured_video_vimeo }
+                    value={ postMeta._wsu_featured_video_vimeo }
                     help=''
-                    onChange={ ( value ) => setPostMeta( { wsu_featured_video_vimeo: value } ) }
+                    onChange={ ( value ) => setPostMeta( { _wsu_featured_video_vimeo: value } ) }
                 />
                 <TextControl
                     label='Thumbnail Video (Vimeo Only)'

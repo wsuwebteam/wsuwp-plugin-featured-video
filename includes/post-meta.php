@@ -12,7 +12,7 @@ class Post_Meta {
 
 		register_post_meta(
 			'',
-			'wsu_featured_video_youtube',
+			'_wsu_featured_video_youtube',
 			array(
 				'type'         => 'string',
 				'single'       => true,
@@ -23,7 +23,7 @@ class Post_Meta {
 
 		register_post_meta(
 			'',
-			'wsu_featured_video_vimeo',
+			'_wsu_featured_video_vimeo',
 			array(
 				'type'         => 'string',
 				'single'       => true,

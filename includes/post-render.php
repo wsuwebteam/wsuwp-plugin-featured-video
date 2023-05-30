@@ -16,7 +16,9 @@ class Post_Render {
 
 			$post_id = get_the_ID();
 
-			$youtube_id = get_post_meta( $post_id, 'wsu_featured_video_youtube', true );
+			$youtube_id = get_post_meta( $post_id, '_wsu_featured_video_youtube', true );
+
+			$vimeo_id = get_post_meta( $post_id, '_wsu_featured_video_vimeo', true );
 
 			if ( ! empty( $youtube_id ) || ! empty( $vimeo_id ) ) {
 
@@ -35,12 +37,8 @@ class Post_Render {
 
 		if ( is_singular() && in_the_loop() && is_main_query() ) {
 
-			$youtube_id = get_post_meta( $post_id, 'wsu_featured_video_youtube', true );
-			$vimeo_id   = get_post_meta( $post_id, 'wsu_featured_video_vimeo', true );
-
-			$args = array(
-				'as_background' => get_post_meta( $post_id, 'wsu_featured_video_as_background', false ),
-			);
+			$youtube_id = get_post_meta( $post_id, '_wsu_featured_video_youtube', true );
+			$vimeo_id   = get_post_meta( $post_id, '_wsu_featured_video_vimeo', true );
 
 			if ( ! empty( $youtube_id ) ) {
 
@@ -71,11 +69,7 @@ class Post_Render {
 
 		ob_start();
 
-		if ( ! empty( $args['as_background'] ) ) {
-
-			include Plugin::get( 'dir' ) . '/templates/post-vimeo-background.php';
-
-		}
+		include Plugin::get( 'dir' ) . '/templates/post-vimeo-background.php';
 
 		return ob_get_clean();
 

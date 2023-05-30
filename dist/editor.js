@@ -38,17 +38,17 @@ const FeaturedVideo = _ref => {
     initialOpen: "false"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     label: "YouTube Video ID",
-    value: postMeta.wsu_featured_video_youtube,
+    value: postMeta._wsu_featured_video_youtube,
     help: "",
     onChange: value => setPostMeta({
-      wsu_featured_video_youtube: value
+      _wsu_featured_video_youtube: value
     })
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     label: "Background/Autoplay Video (Vimeo Only)",
-    value: postMeta.wsu_featured_video_vimeo,
+    value: postMeta._wsu_featured_video_vimeo,
     help: "",
     onChange: value => setPostMeta({
-      wsu_featured_video_vimeo: value
+      _wsu_featured_video_vimeo: value
     })
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
     label: "Thumbnail Video (Vimeo Only)",
