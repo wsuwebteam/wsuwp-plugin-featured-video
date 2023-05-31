@@ -41,6 +41,16 @@ class Post_Meta {
 				'show_in_rest' => true,
 			)
 		);
+		register_post_meta(
+			'',
+			'_wsu_featured_video_caption',
+			array(
+				'type'         => 'string',
+				'single'       => true,
+				'default'      => '',
+				'show_in_rest' => true,
+			)
+		);
 	}
 
 

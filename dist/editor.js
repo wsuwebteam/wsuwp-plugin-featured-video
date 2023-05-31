@@ -57,6 +57,13 @@ const FeaturedVideo = _ref => {
     onChange: value => setPostMeta({
       _wsu_featured_thumbnail_video: value
     })
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+    label: "Video Caption",
+    value: postMeta._wsu_featured_video_caption,
+    help: "",
+    onChange: value => setPostMeta({
+      _wsu_featured_video_caption: value
+    })
   })));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_3__.compose)([(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_4__.withSelect)(select => {
