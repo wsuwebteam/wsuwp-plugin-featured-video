@@ -29,6 +29,12 @@ const FeaturedVideo = ( { postType, postMeta, setPostMeta } ) => {
                     help='YouTube does not support background videos'
                     onChange={ ( value ) => setPostMeta( { _wsu_featured_thumbnail_video: value } ) }
                 />
+                <TextControl
+                    label='Video Caption'
+                    value={ postMeta._wsu_featured_video_caption }
+                    help=''
+                    onChange={ ( value ) => setPostMeta( { _wsu_featured_video_caption: value } ) }
+                />
             </PluginDocumentSettingPanel> }
             </>
         )

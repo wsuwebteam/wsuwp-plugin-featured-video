@@ -37,16 +37,17 @@ class Post_Render {
 
 		if ( is_singular() && in_the_loop() && is_main_query() ) {
 
-			$youtube_id = get_post_meta( $post_id, '_wsu_featured_video_youtube', true );
-			$vimeo_id   = get_post_meta( $post_id, '_wsu_featured_video_vimeo', true );
+			$youtube_id    = get_post_meta( $post_id, '_wsu_featured_video_youtube', true );
+			$vimeo_id      = get_post_meta( $post_id, '_wsu_featured_video_vimeo', true );
+			$video_caption = get_post_meta( $post_id, '_wsu_featured_video_caption', true );
 
 			if ( ! empty( $youtube_id ) ) {
 
-				$content = self::get_youtube_player( $youtube_id, $args ) . $content;
+				$content = self::get_youtube_player( $youtube_id, $video_caption, $args ) . $content;
 
 			} elseif ( ! empty( $vimeo_id ) ) {
 
-				$content = self::get_vimeo_player( $vimeo_id, $args ) . $content;
+				$content = self::get_vimeo_player( $vimeo_id, $video_caption, $args ) . $content;
 
 			}
 		}
@@ -55,7 +56,7 @@ class Post_Render {
 
 	}
 
-	protected static function get_youtube_player( $video_id, $args ) {
+	protected static function get_youtube_player( $video_id, $video_caption, $args ) {
 
 		ob_start();
 
@@ -65,7 +66,7 @@ class Post_Render {
 
 	}
 
-	protected static function get_vimeo_player( $video_id, $args ) {
+	protected static function get_vimeo_player( $video_id, $video_caption, $args ) {
 
 		ob_start();
 
@@ -74,7 +75,6 @@ class Post_Render {
 		return ob_get_clean();
 
 	}
-
 
 }
 
